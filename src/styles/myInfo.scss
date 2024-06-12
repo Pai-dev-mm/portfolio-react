@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+#info {
+  font-family: "Syne", sans-serif;
+
+  .hoverBlur {
+    position: absolute;
+    width: 80%;
+
+    border: none;
+    box-shadow: 0px -27px 90px 47px rgba(27, 26, 85, 0.6);
+    bottom: 0;
+  }
+
+  .profileImg {
+    width: 70%;
+    height: 90%;
+    
+
+
+    @media screen and (max-width : "1190px") {
+      width : 80%
+    }
+  }
+
+  .aboutText {
+    color: #dadada;
+    font-family: inherit;
+    font-size: 18px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 50px;
+      height: 2px;
+      left: 0;
+      background-color: #535c91;
+    }
+  }
+
+  .descripText {
+    color: #dadada;
+    font-size: 20px;
+
+    span {
+      color: #535c91;
+    }
+  }
+
+  .skillText {
+    color: #dadada;
+    font-family: inherit;
+    font-size: 22px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      width: 25px;
+      height: 2px;
+      left: 0;
+      background-color: #535c91;
+    }
+  }
+}

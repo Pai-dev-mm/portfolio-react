@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+#nav {
+  position: relative;
+  z-index: 1;
+  width: 35%;
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #f0f0f0;
+    list-style: none;
+    font-family: "Syne", sans-serif;
+
+    li {
+      margin-right: 20px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 0;
+          position: absolute;
+          background-color: #626fbc;
+          height: 2px;
+          left: 0;
+          bottom: -4px;
+          transition: width 0.4s;
+        }
+
+        &:hover::after {
+          width: 60%;
+        }
+        &:hover {
+          color: #6c7ddb;
+        }
+      }
+    }
+
+    // for navlink
+    @media screen and (max-width: "1190px") {
+      display: flex;
+      flex-direction: column;
+      height: 60%;
+
+      li {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // for navbar
+  @media screen and (max-width: "1190px") {
+    top: 0;
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    right: -20rem;
+    background-color: #031c7496;
+    display: flex;
+    align-items: center;
+    transition: right 0.4s ease;
+  }
+}

@@ -1,0 +1,63 @@
+#footer {
+  ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    color: #f0f0f0;
+    list-style: none;
+    font-family: "Syne", sans-serif;
+    padding: 0;
+
+    li {
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #f0f0f0;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 0;
+          position: absolute;
+          background-color: #626fbc;
+          height: 2px;
+          left: 0;
+          bottom: -4px;
+          transition: width 0.4s;
+        }
+
+        &:hover::after {
+          width: 60%;
+        }
+        &:hover {
+          color: #6c7ddb;
+        }
+      }
+    }
+  }
+
+  .arrowDiv {
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-15px);
+      }
+    }
+
+    &:hover {
+      .arrow {
+        animation: bounce 2s infinite;
+      }
+    }
+  }
+}

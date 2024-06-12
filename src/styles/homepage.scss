@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+.container {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+  cursor: default;
+
+  .profileImg {
+    height: 70%;
+  }
+
+  .webText {
+    color: #f0f0f0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 30%;
+      height: 3px;
+      position: absolute;
+      bottom: -0.3rem;
+      background-color: #535c91;
+      left: 6px;
+      border-radius: 5px;
+      transition: left 0.4s ease;
+    }
+
+    &:hover::after {
+      left: 50px;
+    }
+  }
+
+  .hoverBlur {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    background-color: #1d1c5c63;
+    filter: blur(50px);
+  }
+
+  .recentText {
+    font-family: "Syne", sans-serif;
+
+    left: 43%;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @media screen and (max-width: "1190px") {
+    flex-direction: column-reverse;
+
+    .profileImg {
+      height: 100%;
+    }
+
+    .recentText {
+      left: 30%;
+      font-size: 15px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+/* 
+font-family: "Syne", sans-serif;
+    width: "fit-content";
+    position: "absolute";
+    bottom: 10;
+    left: "43%";
+    color: "#dadada";
+    font-size: 18;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+    text-decoration: "none"; */
